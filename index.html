@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAID — Изучение таджвида</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="site-header">
+    <a href="#" class="logo" data-page="home" aria-label="SAID — Главная">
+      <img src="images/logo.png" alt="SAID — логотип">
+    </a>
+
+    <nav class="navigation">
+      <button data-page="home">Главная</button>
+      <button data-page="letters">Буквы и махраджи</button>
+      <button data-page="tajweed">Правила таджвида</button>
+      <button data-page="exercises">Упражнения</button>
+      <button data-page="videos">Видео от канала «Арабия»</button>
+      <button data-page="progress">Мой прогресс</button>
+    </nav>
+  </header>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <main>
+
+    <!-- ГЛАВНАЯ -->
+    <section id="home" class="page active">
+
+      <div class="hero">
+        <p class="eyebrow">ОБРАЗОВАТЕЛЬНАЯ ПЛАТФОРМА</p>
+        <h1>Таджвид для начинающих</h1>
+        <p>
+          Понятные объяснения, наглядные схемы, видео и практические
+          материалы для учениц Саидовой Эльмиры Могомедовны.
+        </p>
+        <button class="primary-button" data-page="letters">
+          Начать обучение →
+        </button>
+      </div>
+
+      <!-- БЫСТРЫЙ ДОСТУП -->
+      <div class="quick-access">
+
+        <button class="quick-card" data-page="letters">
+          <span class="icon">ا ب</span>
+          <h3>Буквы и махраджи</h3>
+          <p>Где образуется каждый звук</p>
+        </button>
+
+        <button class="quick-card" data-page="tajweed">
+          <span class="icon">۞</span>
+          <h3>Правила таджвида</h3>
+          <p>Простые объяснения</p>
+        </button>
+
+        <button class="quick-card" data-page="exercises">
+          <span class="icon">✎</span>
+          <h3>Упражнения</h3>
+          <p>Практика и повторение</p>
+        </button>
+
+        <button class="quick-card" data-page="videos">
+          <span class="icon">▶</span>
+          <h3>Видео от канала «Арабия»</h3>
+          <p>Полезные уроки</p>
+        </button>
+
+      </div>
+
+      <!-- ОБУЧАЮЩИЙ БЛОК -->
+      <section class="content-block intro-block">
+        <div>
+          <h2>Учимся читать Коран правильно</h2>
+          <p>
+            Изучайте буквы, правила таджвида и закрепляйте знания
+            на примерах из Корана.
+          </p>
+          <button class="primary-button" data-page="exercises">
+            Перейти к урокам →
+          </button>
+        </div>
+      </section>
+
+      <!-- ПОПУЛЯРНЫЕ РАЗДЕЛЫ -->
+      <section class="popular-section">
+        <h2>Популярные разделы</h2>
+
+        <div class="card-grid">
+
+          <button class="topic-card" data-page="letters">
+            <img
+              src="images/card-makharij.jpeg"
+              alt="Махраджи арабских букв"
+              class="card-image"
+            >
+            <h3>Махраджи букв</h3>
+            <p>Схемы и объяснения</p>
+          </button>
+
+          <button class="topic-card" data-page="tajweed">
+            <h3>Правила таджвида</h3>
+            <p>Кратко и понятно</p>
+          </button>
+
+          <button class="topic-card" data-page="exercises">
+            <h3>Упражнения</h3>
+            <p>Практика и повторение</p>
+          </button>
+
+          <button class="topic-card" data-page="videos">
+            <h3>Полезные материалы</h3>
+            <p>Видео и учебные материалы</p>
+          </button>
+
+        </div>
+      </section>
+
+    </section>
+
+    <!-- БУКВЫ И МАХРАДЖИ -->
+    <section id="letters" class="page">
+
+      <p class="breadcrumbs">
+        <button class="text-button" data-page="home">Главная</button>
+        › Буквы и махраджи
+      </p>
+
+      <h1>Махраджи и произношение букв</h1>
+      <p>
+        Изучайте 28 букв арабского алфавита, места образования звуков
+        и особенности произношения.
+      </p>
+
+      <label for="letter-search">Поиск буквы</label>
+      <input
+        id="letter-search"
+        type="search"
+        placeholder="Поиск буквы или названия"
+      >
+
+      <label for="makhraj-filter">Фильтр по махраджу</label>
+      <select id="makhraj-filter">
+        <option value="all">Все места образования</option>
+        <option value="throat">Горло</option>
+        <option value="tongue">Язык</option>
+        <option value="lips">Губы</option>
+        <option value="nose">Полость носа</option>
+        <option value="mouth">Полость рта</option>
+      </select>
+
+      <h2>Арабский алфавит</h2>
+      <div id="letters-grid" class="letter-grid"></div>
+
+      <div id="letter-details" class="content-block">
+        <h2>Выберите букву</h2>
+        <p>
+          Нажмите на букву, чтобы увидеть её описание
+          и подсказку по произношению.
+        </p>
+      </div>
+
+      <section class="content-block">
+        <h2>Что такое махрадж?</h2>
+        <p>
+          Махрадж — место, где образуется звук буквы.
+          Знание махраджей помогает правильно произносить
+          арабские буквы и читать Коран.
+        </p>
+      </section>
+
+    </section>
+
+    <!-- ПРАВИЛА ТАДЖВИДА -->
+    <section id="tajweed" class="page">
+
+      <p class="breadcrumbs">
+        <button class="text-button" data-page="home">Главная</button>
+        › Правила таджвида
+      </p>
+
+      <h1>Правила таджвида</h1>
+      <p>
+        Изучайте правила чтения Корана шаг за шагом.
+        Понятные объяснения, примеры и практика.
+      </p>
+
+      <input
+        id="rule-search"
+        type="search"
+        placeholder="Поиск правила"
+      >
+
+      <select id="rule-category">
+        <option value="all">Все правила</option>
+        <option>Нун сакина и танвин</option>
+        <option>Мим сакина</option>
+        <option>Мадд (удлинение)</option>
+        <option>Идгам</option>
+        <option>Икфа</option>
+        <option>Изхар</option>
+        <option>Икляб</option>
+        <option>Лям</option>
+        <option>Солнечные и лунные буквы</option>
+      </select>
+
+      <h2>Категории правил</h2>
+      <div id="rules-grid" class="card-grid"></div>
+
+      <section class="content-block">
+        <h2>Как применять правила таджвида?</h2>
+        <p>
+          Изучайте каждое правило с примерами
+          и закрепляйте знания на практике.
+        </p>
+        <button class="primary-button" data-page="exercises">
+          Начать изучение →
+        </button>
+      </section>
+
+    </section>
+
+    <!-- УПРАЖНЕНИЯ -->
+    <section id="exercises" class="page">
+
+      <p class="breadcrumbs">
+        <button class="text-button" data-page="home">Главная</button>
+        › Упражнения
+      </p>
+
+      <h1>Практика и закрепление</h1>
+      <p>
+        Тренируйте произношение, проверяйте знания
+        и закрепляйте правила таджвида.
+      </p>
+
+      <div class="quick-access">
+
+        <button class="quick-card" data-page="letters">
+          <span class="icon">ا ب</span>
+          <h3>Повторение букв</h3>
+          <p>Все 28 букв</p>
+        </button>
+
+        <button class="quick-card" data-page="letters">
+          <span class="icon">◉</span>
+          <h3>Практика махраджей</h3>
+          <p>Места образования звуков</p>
+        </button>
+
+        <button class="quick-card" data-page="tajweed">
+          <span class="icon">۞</span>
+          <h3>Упражнения по правилам</h3>
+          <p>Идгам, икфа и другие правила</p>
+        </button>
+
+        <button class="quick-card" id="open-quiz">
+          <span class="icon">✓</span>
+          <h3>Проверка знаний</h3>
+          <p>Мини-тест</p>
+        </button>
+
+      </div>
+
+      <div class="content-block">
+        <h2 id="quiz-title">Мини-тест по таджвиду</h2>
+        <p id="quiz-question">
+          Нажмите «Начать тест», чтобы проверить знания.
+        </p>
+
+        <div id="quiz-answers"></div>
+        <p id="quiz-feedback" aria-live="polite"></p>
+        <p id="quiz-score"></p>
+
+        <button id="start-quiz" class="primary-button">
+          Начать тест
+        </button>
+
+        <button id="next-question" class="primary-button" hidden>
+          Следующий вопрос →
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ВИДЕО -->
+    <section id="videos" class="page">
+
+      <p class="breadcrumbs">
+        <button class="text-button" data-page="home">Главная</button>
+        › Видео от канала «Арабия»
+      </p>
+
+      <h1>Видео от канала «Арабия»</h1>
+      <p>
+        Учебные видео для изучения таджвида,
+        правильного произношения и чтения Корана.
+      </p>
+
+      <input
+        id="video-search"
+        type="search"
+        placeholder="Поиск видео"
+      >
+
+      <h2>Видеоуроки</h2>
+
+      <div id="videos-grid" class="card-grid">
+
+        <article class="topic-card video-card" data-title="Махраджи букв">
+          <h3>Махраджи букв</h3>
+          <p>Места образования арабских звуков.</p>
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Открыть YouTube ↗</a>
+        </article>
+
+        <article class="topic-card video-card" data-title="Правила таджвида">
+          <h3>Правила таджвида</h3>
+          <p>Основные правила чтения Корана.</p>
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Открыть YouTube ↗</a>
+        </article>
+
+        <article class="topic-card video-card" data-title="Практика и повторение">
+          <h3>Практика и повторение</h3>
+          <p>Закрепление изученного материала.</p>
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Открыть YouTube ↗</a>
+        </article>
+
+      </div>
+
+      <p>
+        Примечание: ссылки пока общие. Позже их можно заменить
+        ссылками на конкретные ролики канала «Арабия».
+      </p>
+
+    </section>
+
+    <!-- МОЙ ПРОГРЕСС -->
+    <section id="progress" class="page">
+
+      <p class="breadcrumbs">
+        <button class="text-button" data-page="home">Главная</button>
+        › Мой прогресс
+      </p>
+
+      <h1>Мой прогресс</h1>
+      <p>
+        Отслеживайте свой путь в изучении букв и правил таджвида.
+      </p>
+
+      <div class="card-grid">
+
+        <article class="topic-card">
+          <h3>Пройдено тестов</h3>
+          <p id="tests-completed">0</p>
+        </article>
+
+        <article class="topic-card">
+          <h3>Правильных ответов</h3>
+          <p id="correct-answers">0</p>
+        </article>
+
+        <article class="topic-card">
+          <h3>Точность</h3>
+          <p id="accuracy">0%</p>
+        </article>
+
+        <article class="topic-card">
+          <h3>Изучено букв</h3>
+          <p id="letters-studied">0 из 28</p>
+        </article>
+
+      </div>
+
+      <div class="content-block">
+        <h2>Мой план обучения</h2>
+        <p>
+          Продолжайте изучать буквы, махраджи и правила таджвида,
+          регулярно выполняя упражнения.
+        </p>
+
+        <div class="progress-track">
+          <div id="progress-fill"></div>
+        </div>
+
+        <p id="progress-caption">
+          Начните обучение, чтобы отслеживать прогресс.
+        </p>
+
+        <button class="primary-button" data-page="exercises">
+          Продолжить обучение →
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ПОДВАЛ С ЛОГОТИПОМ -->
+  <footer class="site-footer">
+
+    <a href="#" class="footer-logo" data-page="home" aria-label="SAID — Главная">
+      <img src="images/logo.png" alt="SAID — логотип">
+    </a>
+
+    <div class="footer-description">
+      <p>Образовательная платформа</p>
+      <p>по изучению таджвида</p>
+    </div>
+
+    <nav class="footer-navigation" aria-label="Навигация в подвале">
+      <button data-page="home">Главная</button>
+      <button data-page="letters">Буквы</button>
+      <button data-page="tajweed">Правила</button>
+      <button data-page="exercises">Упражнения</button>
+      <button data-page="videos">Видео</button>
+      <button data-page="progress">Мой прогресс</button>
+    </nav>
+
+    <div class="footer-message">
+      <p>Пусть Аллах приумножит ваши знания!</p>
+      <span>Саидова Эльмира Могомедовна</span>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 SAID. Все права защищены.</span>
+      <span>Образовательная платформа по изучению таджвида</span>
+    </div>
+
+  </footer>
+
+</body>
+</html>
